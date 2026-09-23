@@ -6,8 +6,6 @@ r = redis.Redis(
     decode_responses=True
 )
 
-r.flushdb()
-
 
 r.hset("user", mapping = {"name": "Kaushik", "age": 21, "city": "Hyd"})
 
