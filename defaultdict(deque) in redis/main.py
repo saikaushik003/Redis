@@ -6,16 +6,19 @@ r = redis.Redis(
     decode_responses=True
 )
 
+# Tollywood - using LPUSH
 r.lpush("tollywood", "NTR")
 r.lpush("tollywood", "AA")
 r.lpush("tollywood", "Prabhas")
 r.lpush("tollywood", "MB")
-r.lpush("bollywood", "Salman")
-r.lpush("bollywood", "SRK")
-r.lpush("bollywood", "Aamir")
-r.lpush("bollywood", "Amithabh")
+
+# Bollywood - using RPUSH
+r.rpush("bollywood", "Salman")
+r.rpush("bollywood", "SRK")
+r.rpush("bollywood", "Aamir")
+r.rpush("bollywood", "Amithabh")
 
 keys = r.keys("*")
 
 for i in keys:
-    print(f"{i}: {r.lrange(i, 0, )}")
+    print(f"{i}: {r.lrange(i, 0, -1)}")
