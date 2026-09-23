@@ -159,7 +159,7 @@ d["user"].values()
 |---|---|
 | `HSET -> r.hset(outer_key, mapping={key1: val1, key2: val2})` | `d[key][field] = value` |
 | `HGET -> r.hget(outer_key, inner_key)` | `d[key][field]` |
-| `HGETALL -> rhgetall(outer_key)` | `d[key]` |
+| `HGETALL -> r.hgetall(outer_key)` | `d[key]` |
 | `HDEL -> r.hdel(outer_key, inner_key)` | `del d[key][field]` |
 | `HEXISTS -> r.hexists(outer_key, inner_key)` `if inner_key in outer_key` | `field in d[key]` |
 | `HKEYS -> r.hkeys(outer_key)` | `d[key].keys()` |
