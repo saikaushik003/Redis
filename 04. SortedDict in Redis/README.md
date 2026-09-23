@@ -293,7 +293,7 @@ print(rank_asc, rank_desc)
 
 | Redis | Purpose |
 |---|---|
-| `ZADD -> r.zadd(outer_key, {inner_key, val})` | Add / update member + score |
+| `ZADD -> r.zadd(outer_key, {inner_key: val})` | Add / update member + score |
 | `ZRANGE -> r.zrange(outer_key, 0, -1)` | Lowest → highest |
 | `ZREVRANGE -> r.zrevrange(outer_key, 0, -1)` | Highest → lowest |
 | `ZINCRBY -> r.zincrby(outer_key, value_to_be_incremented, inner_key)` | Increment / decrement score |
